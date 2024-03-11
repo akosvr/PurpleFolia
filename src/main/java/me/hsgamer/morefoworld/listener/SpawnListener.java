@@ -1,5 +1,6 @@
 package me.hsgamer.morefoworld.listener;
 
+import com.destroystokyo.paper.event.server.ServerTickStartEvent;
 import io.github.projectunified.minelib.plugin.base.BasePlugin;
 import io.github.projectunified.minelib.plugin.listener.ListenerComponent;
 import me.hsgamer.morefoworld.config.SpawnConfig;

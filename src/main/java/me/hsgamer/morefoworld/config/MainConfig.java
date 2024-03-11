@@ -4,6 +4,8 @@ import me.hsgamer.hscore.config.annotation.Comment;
 import me.hsgamer.hscore.config.annotation.ConfigPath;
 import me.hsgamer.morefoworld.WorldSetting;
 import me.hsgamer.morefoworld.config.converter.WorldSettingListConverter;
+import org.bukkit.World;
+import org.bukkit.WorldType;
 
 import java.util.ArrayList;
 import java.util.List;

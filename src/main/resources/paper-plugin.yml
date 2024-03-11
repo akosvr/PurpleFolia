@@ -1,8 +1,8 @@
-name: '${name}'
-version: '${version}'
+name: 'MoreFoWorld'
+version: '1.5.1'
 main: me.hsgamer.morefoworld.MoreFoWorld
-api-version: '${apiVersion}'
-load: POSTWORLD
-authors: [ HSGamer ]
-description: '${description}'
+api-version: '1.20'
+load: STARTUP
+authors: [HSGamer]
+description: 'Processes main resources.'
 folia-supported: true

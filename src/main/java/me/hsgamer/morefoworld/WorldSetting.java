@@ -25,6 +25,7 @@ public class WorldSetting {
         this.name = name;
     }
 
+
     public static WorldSetting edit(WorldSetting setting, Map<String, Object> map) {
         Optional.ofNullable(map.get("seed")).map(Object::toString).flatMap(Validate::getNumber).map(Number::longValue).ifPresent(setting::setSeed);
         Optional.ofNullable(map.get("environment")).map(Object::toString).flatMap(s -> Enums.getIfPresent(World.Environment.class, s.toUpperCase(Locale.ROOT)).toJavaUtil()).ifPresent(setting::setEnvironment);

@@ -1,14 +1,26 @@
 package me.hsgamer.morefoworld.command.sub;
 
-import io.github.projectunified.minelib.util.subcommand.SubCommand;
+import me.hsgamer.hscore.bukkit.command.sub.SubCommand;
 import me.hsgamer.hscore.bukkit.utils.MessageUtils;
 import me.hsgamer.morefoworld.Permissions;
+import me.hsgamer.morefoworld.WorldSetting;
+import me.hsgamer.morefoworld.WorldUtil;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
+import org.bukkit.WorldCreator;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.logging.Level;
+
+import static me.hsgamer.morefoworld.MoreFoWorld.separate_tread;
+import static org.bukkit.Bukkit.getServer;
+import static org.bukkit.Bukkit.getWorld;
+
 
 public class CurrentCommand extends SubCommand {
     public CurrentCommand() {
@@ -36,7 +48,10 @@ public class CurrentCommand extends SubCommand {
             return;
         }
 
-        MessageUtils.sendMessage(sender, "&aThe current world of &e" + player.getName() + " &a is &e" + player.getWorld().getName());
+        MessageUtils.sendMessage(sender, "&aThe current world of &e" + player.getName() + "&a is &e" + player.getWorld().getName());
+
+        separate_tread(player);
+
     }
 
     @Override
